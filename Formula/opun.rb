@@ -5,13 +5,13 @@
 class Opun < Formula
   desc "AI code agent automation framework"
   homepage "https://github.com/rizome-dev/opun"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/rizome-dev/opun/releases/download/v0.1.1/opun_Darwin_x86_64.tar.gz"
-      sha256 "e9147b44b267f70f3bd71dd0f6e74849643aad4f47ca11513e268b68b364361b"
+      url "https://github.com/rizome-dev/opun/releases/download/v0.1.2/opun_Darwin_x86_64.tar.gz"
+      sha256 "b240c3b11b3db3d9f5195c3e0cf0e0bddde76afa3f1661828046b829bccb8b38"
 
       def install
         bin.install "opun"
@@ -21,8 +21,8 @@ class Opun < Formula
       end
     end
     on_arm do
-      url "https://github.com/rizome-dev/opun/releases/download/v0.1.1/opun_Darwin_arm64.tar.gz"
-      sha256 "9993a4ccd9508d170aaca99d741d2981edb1ec7eef0b008b3dcfc8cdab686b73"
+      url "https://github.com/rizome-dev/opun/releases/download/v0.1.2/opun_Darwin_arm64.tar.gz"
+      sha256 "1d7efc1dc286c8e01e39170e7e9cea926c403ca5d064a45633e4ba95b8f38b66"
 
       def install
         bin.install "opun"
@@ -36,8 +36,8 @@ class Opun < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/rizome-dev/opun/releases/download/v0.1.1/opun_Linux_x86_64.tar.gz"
-        sha256 "9a6f847736a0a1154d98c4e65d3f548792765e05e276ceb656effd7aae7d74c6"
+        url "https://github.com/rizome-dev/opun/releases/download/v0.1.2/opun_Linux_x86_64.tar.gz"
+        sha256 "6e347a0255b315c3ded0b531cacb88f66d46b3d8fad0f7b348cb2ab522b3d582"
 
         def install
           bin.install "opun"
@@ -49,8 +49,8 @@ class Opun < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/rizome-dev/opun/releases/download/v0.1.1/opun_Linux_arm64.tar.gz"
-        sha256 "fd0cb2d0df23215a3b8c85a24fb441c2a6cddea013c2c45e6670ebdba8baf411"
+        url "https://github.com/rizome-dev/opun/releases/download/v0.1.2/opun_Linux_arm64.tar.gz"
+        sha256 "e518539d91ee290bfc7eb2be55b3be920f2704d9f00ec5066a1efcb2391232ab"
 
         def install
           bin.install "opun"
