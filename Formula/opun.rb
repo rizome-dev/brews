@@ -5,13 +5,13 @@
 class Opun < Formula
   desc "AI code agent automation framework"
   homepage "https://github.com/rizome-dev/opun"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/rizome-dev/opun/releases/download/v0.1.2/opun_Darwin_x86_64.tar.gz"
-      sha256 "b240c3b11b3db3d9f5195c3e0cf0e0bddde76afa3f1661828046b829bccb8b38"
+    if Hardware::CPU.intel?
+      url "https://github.com/rizome-dev/opun/releases/download/v0.1.3/opun_Darwin_x86_64.tar.gz"
+      sha256 "6092c507d17ee68dfbf9eea053578c6004621d2614ccd44be2ebe8e60be43d80"
 
       def install
         bin.install "opun"
@@ -20,9 +20,9 @@ class Opun < Formula
         generate_completions_from_executable(bin/"opun", "completion")
       end
     end
-    on_arm do
-      url "https://github.com/rizome-dev/opun/releases/download/v0.1.2/opun_Darwin_arm64.tar.gz"
-      sha256 "1d7efc1dc286c8e01e39170e7e9cea926c403ca5d064a45633e4ba95b8f38b66"
+    if Hardware::CPU.arm?
+      url "https://github.com/rizome-dev/opun/releases/download/v0.1.3/opun_Darwin_arm64.tar.gz"
+      sha256 "f20e6a78b2119dbd2f53729b3f8e9e8ad06469d5d7e1c50675f0c365971f9ab9"
 
       def install
         bin.install "opun"
@@ -34,30 +34,24 @@ class Opun < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/rizome-dev/opun/releases/download/v0.1.2/opun_Linux_x86_64.tar.gz"
-        sha256 "6e347a0255b315c3ded0b531cacb88f66d46b3d8fad0f7b348cb2ab522b3d582"
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/rizome-dev/opun/releases/download/v0.1.3/opun_Linux_x86_64.tar.gz"
+      sha256 "04c573dd87d2590dddc7693a2e6082b887f33e9558c226f129b929df8547006e"
+      def install
+        bin.install "opun"
 
-        def install
-          bin.install "opun"
-
-          # Generate and install shell completions
-          generate_completions_from_executable(bin/"opun", "completion")
-        end
+        # Generate and install shell completions
+        generate_completions_from_executable(bin/"opun", "completion")
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/rizome-dev/opun/releases/download/v0.1.2/opun_Linux_arm64.tar.gz"
-        sha256 "e518539d91ee290bfc7eb2be55b3be920f2704d9f00ec5066a1efcb2391232ab"
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/rizome-dev/opun/releases/download/v0.1.3/opun_Linux_arm64.tar.gz"
+      sha256 "a7f5efb1ea0f04f7bd8899a7050bdfa0fa8fe1633057c18382f02142bd03b631"
+      def install
+        bin.install "opun"
 
-        def install
-          bin.install "opun"
-
-          # Generate and install shell completions
-          generate_completions_from_executable(bin/"opun", "completion")
-        end
+        # Generate and install shell completions
+        generate_completions_from_executable(bin/"opun", "completion")
       end
     end
   end
