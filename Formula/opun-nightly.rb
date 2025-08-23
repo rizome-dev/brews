@@ -5,13 +5,13 @@
 class OpunNightly < Formula
   desc "AI code agent automation framework (Nightly/Prerelease)"
   homepage "https://github.com/rizome-dev/opun"
-  version "0.1.3-nightly"
+  version "0.1.7-nightly"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rizome-dev/opun/releases/download/v0.1.3-nightly/opun_Darwin_x86_64.tar.gz"
-      sha256 "fed71b41ffb24ea4970537256ec203959934b67d09e01881669d05bf1976320a"
+      url "https://github.com/rizome-dev/opun/releases/download/v0.1.7-nightly/opun_Darwin_x86_64.tar.gz"
+      sha256 "1b840fb63f92a5c763c20036d0e8bce0666f6ee2ee702706d0835e01743322c9"
 
       def install
         bin.install "opun"
@@ -21,8 +21,8 @@ class OpunNightly < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rizome-dev/opun/releases/download/v0.1.3-nightly/opun_Darwin_arm64.tar.gz"
-      sha256 "2cd2c4b0ea1c649c0c15dc8ba258bf588ddb01a18a3a0613c73ff191d6c6fa25"
+      url "https://github.com/rizome-dev/opun/releases/download/v0.1.7-nightly/opun_Darwin_arm64.tar.gz"
+      sha256 "bae2b23b3977ce7f3f630ac90d08c1924006a18f70476e3ccf3b3501b11c0081"
 
       def install
         bin.install "opun"
@@ -35,8 +35,8 @@ class OpunNightly < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/rizome-dev/opun/releases/download/v0.1.3-nightly/opun_Linux_x86_64.tar.gz"
-      sha256 "a23c3c9f401222f79f7ceb95ca5d594f1c9b560df56590bbb96d5c4c09ad6ea3"
+      url "https://github.com/rizome-dev/opun/releases/download/v0.1.7-nightly/opun_Linux_x86_64.tar.gz"
+      sha256 "0a4fa3b830900d6a51d6d529a871a02de27faef664c3c83a401e04dd3e0f2f41"
       def install
         bin.install "opun"
 
@@ -45,8 +45,8 @@ class OpunNightly < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/rizome-dev/opun/releases/download/v0.1.3-nightly/opun_Linux_arm64.tar.gz"
-      sha256 "786c268f3861f36cac16c9e16a608feb3bb4bac7153745a0413bafb651f7b18a"
+      url "https://github.com/rizome-dev/opun/releases/download/v0.1.7-nightly/opun_Linux_arm64.tar.gz"
+      sha256 "5ba82290287277ab4ce2d46f685e77a6e68353248a4dfcf7fbef82b429ab9320"
       def install
         bin.install "opun"
 
