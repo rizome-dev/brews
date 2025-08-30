@@ -5,13 +5,13 @@
 class Rizome < Formula
   desc "Agentic development environment workflow management CLI"
   homepage "https://github.com/rizome-dev/rizome"
-  version "0.1.0"
+  version "0.1.1"
   license "GPL-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rizome-dev/rizome/releases/download/v0.1.0/rizome_Darwin_x86_64.tar.gz"
-      sha256 "443b010f3e3297518b72dec46b5939a9bdc28ee1f3bc9ebea3dabbedf596883c"
+      url "https://github.com/rizome-dev/rizome/releases/download/v0.1.1/rizome_Darwin_x86_64.tar.gz"
+      sha256 "adb0e406310bb6ed6013cec75380c275a11351fae7663b03b0822f71ed8feafb"
 
       def install
         bin.install "rizome"
@@ -21,8 +21,8 @@ class Rizome < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rizome-dev/rizome/releases/download/v0.1.0/rizome_Darwin_arm64.tar.gz"
-      sha256 "16ba4972f5f3ab40bbb723489d915fcee56f2bd3cd39c592172ecdffb208b035"
+      url "https://github.com/rizome-dev/rizome/releases/download/v0.1.1/rizome_Darwin_arm64.tar.gz"
+      sha256 "37973e9100efeb1760035d7b4ed5371024ae802307defc3f2fe40ac15ac0aff9"
 
       def install
         bin.install "rizome"
@@ -35,8 +35,8 @@ class Rizome < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/rizome-dev/rizome/releases/download/v0.1.0/rizome_Linux_x86_64.tar.gz"
-      sha256 "75d6de41b2d8566857605883fe8b2fc0e006c0c67484611f40db36c771f27247"
+      url "https://github.com/rizome-dev/rizome/releases/download/v0.1.1/rizome_Linux_x86_64.tar.gz"
+      sha256 "571d3c76a739cc76d7166b28e1ec82c1979dc36d3f822fa973fa5a64dbcd7035"
       def install
         bin.install "rizome"
 
@@ -45,8 +45,8 @@ class Rizome < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/rizome-dev/rizome/releases/download/v0.1.0/rizome_Linux_arm64.tar.gz"
-      sha256 "30a280f39e858336cdf9ad3f30f1b383cf9056711c5d17ebd80692e6e83893a6"
+      url "https://github.com/rizome-dev/rizome/releases/download/v0.1.1/rizome_Linux_arm64.tar.gz"
+      sha256 "ea7b9e3b4c56caf59fb5ed3b230871a39b990230592057f48524e63688bb43c3"
       def install
         bin.install "rizome"
 
